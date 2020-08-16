@@ -10,7 +10,11 @@ while numel(S) > r
     h(end+1) = I;                  % Historic
 end
 
-code = {'0','1'};
+code = {};
+for i = 0:r-1
+    code(end+1) = {num2str(i)};
+end
+
 for i = flip(h)
     for j = 0:r-1
         code(end+1) = strcat(code(i),num2str(j));
