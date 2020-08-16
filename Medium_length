@@ -1,0 +1,1 @@
+L = sum(sort(P,'descend').*cellfun('length',code))
