@@ -11,7 +11,7 @@ while numel(P) > 2
 end
 
 code = {'0','1'};
-for i = flip(p)
+for i = flip(h)
     code(end+1) = strcat(code(i),'0');
     code(end+1) = strcat(code(i),'1');
     code(i) = [];
