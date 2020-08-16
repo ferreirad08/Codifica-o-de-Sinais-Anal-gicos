@@ -22,10 +22,7 @@ code
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
 P = sort(P,'descend');
 
-L = sum(P.*cellfun('length',code))
-
-H = sum(P.*log2(1./P))
-
-eta = H/L
-
-gama = 1 - eta
+L = sum(P.*cellfun('length',code)) % Length
+H = sum(P.*log2(1./P)) % Entropy
+eta = H/L % Efficiency
+gama = 1 - eta % Redudance
