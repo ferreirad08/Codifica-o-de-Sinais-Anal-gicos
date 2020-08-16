@@ -3,7 +3,7 @@ P = sort(P,'descend')
 
 S = P;
 h = [];
-while numel(Pr) > 2
+while numel(S) > 2
     S(end-1) = S(end-1) + S(end);
     S(end) = [];
     [S,I] = sort(S,'descend');
