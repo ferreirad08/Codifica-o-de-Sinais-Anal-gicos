@@ -1,11 +1,12 @@
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
 P = sort(P,'descend')
 
+S = P;
 h = [];
-while numel(P) > 2
-    P(end-1) = P(end-1) + P(end);
-    P(end) = [];
-    [P,I] = sort(P,'descend');
+while numel(Pr) > 2
+    S(end-1) = S(end-1) + S(end);
+    S(end) = [];
+    [S,I] = sort(S,'descend');
     [~,I] = max(I);
     h(end+1) = I;                  % Historic
 end
@@ -18,9 +19,6 @@ for i = flip(h)
 end
 
 code
-
-P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
-P = sort(P,'descend');
 
 H = sum(P.*log2(1./P))             % Entropy
 L = sum(P.*cellfun('length',code)) % Length
