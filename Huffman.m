@@ -1,8 +1,7 @@
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
 P = sort(P,'descend')
 
-S = P;
-h = [];
+S = P; h = [];
 while numel(S) > 2
     S(end-1) = S(end-1) + S(end);
     S(end) = [];
