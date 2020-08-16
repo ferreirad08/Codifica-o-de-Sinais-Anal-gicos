@@ -17,7 +17,7 @@ for i = flip(p)
     code(i) = [];
 end
 
-code
+code'
 
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
 P = sort(P,'descend');
