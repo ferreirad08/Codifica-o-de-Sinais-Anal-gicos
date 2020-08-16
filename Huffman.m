@@ -1,7 +1,4 @@
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10]
-
-H = sum(P.*log2(1./P))             % Entropy
-
 P = sort(P,'descend');
 
 p = [];
@@ -25,6 +22,7 @@ code'
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
 P = sort(P,'descend');
 
+H = sum(P.*log2(1./P))             % Entropy
 L = sum(P.*cellfun('length',code)) % Length
 eta = H/L                          % Efficiency
 gama = 1 - eta                     % Redundancy
