@@ -7,8 +7,8 @@ P = sort(P,'descend')
 
 S = P; h = []; r = 2;
 while numel(S) > r
-    S(end-1) = S(end-1) + S(end);
-    S(end) = [];
+    S(end-r+1) = sum(S(end-r+1:end));
+    S(end-r+2:end) = [];
     [S,I] = sort(S,'descend');
     [~,I] = max(I);
     h(end+1) = I;                  % Historic
