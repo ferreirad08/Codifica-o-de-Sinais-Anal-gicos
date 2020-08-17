@@ -3,9 +3,13 @@
 % Prof. M.Sc. David Alan de O. Ferreira
 
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
-P = sort(P,'descend')
 
-S = P; h = []; r = 2;
+r = 2;
+H = sum(P.*log10(1./P)/log10(r))   % Entropy
+
+P = [sort(P,'descend'), zeros(1,0)]
+
+S = P; h = [];
 while numel(S) > r
     S(end-r+1) = sum(S(end-r+1:end));
     S(end-r+2:end) = [];
@@ -28,7 +32,6 @@ end
 
 code
 
-H = sum(P.*log10(1./P)/log10(r))   % Entropy
 L = sum(P.*cellfun('length',code)) % Length
 eta = H/L                          % Efficiency
 gama = 1 - eta                     % Redundancy
