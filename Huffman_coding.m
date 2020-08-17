@@ -5,9 +5,9 @@
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
 
 r = 4;
-H = sum(P.*log10(1./P)/log10(r))   % Entropy
+H = -sum(P.*log10(P)/log10(r))   % Entropy
 
-for k = 1:9
+for k = 0:9
     n = r+k*(r-1);
     if n >= numel(P)
         break
