@@ -4,10 +4,17 @@
 
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
 
-r = 2;
+r = 4;
 H = sum(P.*log10(1./P)/log10(r))   % Entropy
 
-P = [sort(P,'descend'), zeros(1,0)]
+for k = 1:9
+    n = r+k*(r-1);
+    if n >= numel(P)
+        break
+    end
+end
+
+P = [sort(P,'descend'), zeros(1,n - numel(P))]
 
 S = P; h = [];
 while numel(S) > r
