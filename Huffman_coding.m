@@ -1,3 +1,7 @@
+% Federal University of Amazonas
+% Coding of Analog Signals Discipline
+% Prof. M.Sc. David Alan de O. Ferreira
+
 P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10];
 P = sort(P,'descend')
 
