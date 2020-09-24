@@ -1,5 +1,5 @@
 P = [0.6 0.3 0.1]; % probabilities
-S = [1 1 1]; % sequence of symbols
+S = [1 2 1]; % sequence of symbols
 
 A = [0 cumsum(P)]; % zero and accumulated probabilities
 intervals = A; % first intervals
