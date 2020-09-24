@@ -1,6 +1,6 @@
-P = [0.30, 0.25, 0.15, 0.12, 0.08, 0.10]; % probabilities
+P = [0.6 0.4]; % probabilities
 
-Psort = sort(P,'descend') % ordered probabilities
+Psort = sort(P,'descend'); % ordered probabilities
 h = [];
 while numel(Psort) > 2
     Psort(end-1) = Psort(end-1)+Psort(end);
@@ -20,7 +20,8 @@ end
 
 code % final code
 
-H = -sum(P.*log2(P))               % Entropy
-L = sum(P.*cellfun('length',code)) % Length
-eta = H/L                          % Efficiency
-gama = 1 - eta                     % Redundancy
+Psort = sort(P,'descend') % ordered probabilities
+H = -sum(P.*log2(P)) % entropy
+L = sum(Psort.*cellfun('length',code)) % length
+eta = H/L % efficiency
+gama = 1-eta % redundancy
