@@ -1,4 +1,4 @@
-P = [0.6 0.4]; % probabilities
+P = [0.6 0.3 0.1]; % probabilities
 S = [1 1 1]; % sequence of symbols
 
 A = [0 cumsum(P)]; % zero and accumulated probabilities
@@ -13,7 +13,7 @@ end
 interval = intervals([1 end]) % final interval
 
 y = 100;
-for number = interval(1)+.00001:0.00001:interval(2)
+for number = interval(1):0.00001:interval(2)
     binary = [];
     while number > 0
         number = number*2;
