@@ -17,7 +17,7 @@ end
 
 interval = intervals([1 end]) % final interval
 
-y = 100;
+shorterL = 100;
 for number = interval(1):0.00001:interval(2)
     binary = [];
     while number > 0
@@ -27,9 +27,9 @@ for number = interval(1):0.00001:interval(2)
     end
     
     L = length(binary); % code length
-    if L < y
+    if L < shorterL
         binStr = num2str(binary); % code in string
-        y = L;
+        shorterL = L;
     end
 end
 
