@@ -11,14 +11,13 @@ intervals = A; % first intervals
 for i = S % for each symbol
     low = intervals(i);
     high = intervals(i+1);
-    middle = low+(high-low).*A(2:end-1); % new limits
-    intervals = [low middle high]; % new intervals
+    intervals = low+(high-low).*A; % new intervals
 end
 
-interval = intervals([1 end]) % final interval
+final_interval = intervals([1 end]) % final interval
 
-shorterL = 100;
-for number = interval(1):0.00001:interval(2)
+shorterL = length(S)*8; % 8 bits (1 byte) per symbol
+for number = final_interval(1):0.00001:final_interval(2)
     binary = [];
     while number > 0
         number = number*2;
