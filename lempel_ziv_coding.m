@@ -17,7 +17,7 @@ for i = 1:length(dict)
     token(i) = {strcat(num2str(idx),item(end))};
     
     if length(item) < 2
-        token(i)={strcat('0',item)};
+        token(i) = {strcat('0',item)};
     end
 end
 
