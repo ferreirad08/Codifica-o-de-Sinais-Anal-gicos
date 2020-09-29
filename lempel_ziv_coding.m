@@ -9,4 +9,16 @@ for item = S(2:end)
     end
 end
 
-dict
+dict'
+
+for i = 1:length(dict)
+    item = dict{i};
+    idx = find(strcmp({item(1:end-1)},dict),1);
+    token(i) = {strcat(num2str(idx),item(end))};
+    
+    if length(item) < 2
+        token(i)={strcat('0',item)};
+    end
+end
+
+token'
