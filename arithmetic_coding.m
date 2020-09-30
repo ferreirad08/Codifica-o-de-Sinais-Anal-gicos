@@ -18,7 +18,7 @@ format long % show more decimal places
 final_interval = intervals([1 end]) % final interval
 
 shorterL = length(S)*8; % 8 bits (1 byte) per symbol
-for number = final_interval(1):0.000000001:final_interval(2)
+for number = final_interval(1):1e-13:final_interval(2)
     binary = [];
     while number > 0
         number = number*2;
