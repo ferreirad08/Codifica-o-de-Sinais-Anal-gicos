@@ -14,6 +14,7 @@ for i = S % for each symbol
     intervals = low+(high-low).*A; % new intervals
 end
 
+format long % show more decimal places
 final_interval = intervals([1 end]) % final interval
 
 shorterL = length(S)*8; % 8 bits (1 byte) per symbol
