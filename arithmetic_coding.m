@@ -1,3 +1,6 @@
+% Author: Prof. M.Sc. David Ferreira - Federal University of Amazonas
+% Contact: ferreirad08@gmail.com
+
 P = [0.5, 0.1, 0.2, 0.1, 0.1]; % probabilities
 M = {'S', 'W', 'I', 'M', '_'}; % respective symbols
 S = {'S', 'W', 'I', 'S', 'S', '_', 'M', 'I', 'S', 'S'}; % sequence of symbols
