@@ -1,3 +1,6 @@
+% Author: Prof. M.Sc. David Ferreira - Federal University of Amazonas
+% Contact: ferreirad08@gmail.com
+
 S = {'a','a','a','b','a','b','b','b','a','a','a','b','a','a','a','a','a','a','a','b','a','a','b','b'};
 
 dict = S(1);
