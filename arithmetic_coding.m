@@ -6,31 +6,34 @@ S = {'S', 'W', 'I', 'S', 'S', '_', 'M', 'I', 'S', 'S'}; % sequence of symbols
 M = M(I);
 [~,S] = ismember(S,M);
 
-A = [0 cumsum(P)]; % zero and accumulated probabilities
-intervals = A; % first intervals
+format long % show more decimal places
+
+A = [0 cumsum(P)]'; % zero and accumulated probabilities
+intervals = A % first intervals
 for i = S % for each symbol
     low = intervals(i);
     high = intervals(i+1);
-    intervals = low+(high-low).*A; % new intervals
+    intervals(:) = low+(high-low).*A % new intervals
 end
 
-format long % show more decimal places
-final_interval = intervals([1 end]) % final interval
-
 shorterL = length(S)*8; % 8 bits (1 byte) per symbol
-for number = final_interval(1):1e-13:final_interval(2)
+for number = intervals(1):1e-13:intervals(end)
+    frac = number;
     binary = [];
-    while number > 0
-        number = number*2;
-        binary(end+1) = floor(number); % integer part
-        number = number-floor(number); % decimal part
+    while frac > 0
+        frac = frac*2; % double
+        binary(end+1) = floor(frac); % integer part
+        frac = frac-floor(frac); % decimal part
     end
     
     L = length(binary); % code length
     if L < shorterL
         binStr = num2str(binary); % code in string
-        shorterL = L;
+        shorterL = L; % shortest length
+        C = number; % decimal number
     end
 end
 
 binStr % final code
+shorterL
+C
