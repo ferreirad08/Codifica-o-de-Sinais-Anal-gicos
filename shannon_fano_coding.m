@@ -9,7 +9,8 @@ while numel(unique(C)) < numel(P)
             diff = [];
             Pt = P(idx);
             for i = 1:n-1
-                diff(end+1) = abs(sum(Pt(1:i))-sum(Pt(i+1:end)));
+                diff(end+1) = abs(sum(Pt(1:i))...
+                    -sum(Pt(i+1:end)));
             end
         
             [~,i] = min(diff);
