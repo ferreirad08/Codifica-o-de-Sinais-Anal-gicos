@@ -36,4 +36,4 @@ code % final code
 H = -sum(P.*log2(P)) % entropy
 L = sum(Psort.*cellfun('length',code)) % length
 eta = H/L % efficiency
-gama = 1-eta % redundancy
+gamma = 1-eta % redundancy
