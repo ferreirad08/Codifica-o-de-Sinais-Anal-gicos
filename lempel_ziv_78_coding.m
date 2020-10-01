@@ -19,8 +19,6 @@ for item = S(2:end)
     end
 end
 
-dict'
-
 for i = 1:length(dict)
     item = dict{i};
     idx = find(strcmp({item(1:end-1)},dict),1);
@@ -31,65 +29,4 @@ for i = 1:length(dict)
     end
 end
 
-token'
-
-% lempel_ziv_78_coding
-% 
-% ans = 
-% 
-%     's'
-%     'i'
-%     'r'
-%     '_'
-%     'si'
-%     'd'
-%     '_e'
-%     'a'
-%     'st'
-%     'm'
-%     'an'
-%     '_ea'
-%     'sil'
-%     'y'
-%     '_t'
-%     'e'
-%     'as'
-%     'es'
-%     '_s'
-%     'ea'
-%     '_si'
-%     'c'
-%     'k'
-%     '_se'
-%     'al'
-%     's'
-% 
-% 
-% ans = 
-% 
-%     '0s'
-%     '0i'
-%     '0r'
-%     '0_'
-%     '1i'
-%     '0d'
-%     '4e'
-%     '0a'
-%     '1t'
-%     '0m'
-%     '8n'
-%     '7a'
-%     '5l'
-%     '0y'
-%     '4t'
-%     '0e'
-%     '8s'
-%     '16s'
-%     '4s'
-%     '16a'
-%     '19i'
-%     '0c'
-%     '0k'
-%     '19e'
-%     '8l'
-%     '0s'
+[dict' token']
