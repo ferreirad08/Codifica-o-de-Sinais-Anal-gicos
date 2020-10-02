@@ -29,4 +29,9 @@ for i = 1:length(dict)
     end
 end
 
+if ismember(token(end),token(1:end-1))
+    idx = find(strcmp(token(end),token),1)
+    token(end) = {num2str(idx)}
+end
+
 [dict' token']
