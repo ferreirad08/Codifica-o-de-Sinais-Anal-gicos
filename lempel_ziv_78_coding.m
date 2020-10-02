@@ -35,3 +35,5 @@ if ismember(token(end),token(1:end-1))
 end
 
 [num2cell(1:numel(dict))' dict' token']
+
+for i = token, if length(i{1}) > 1, code = strcat(dec2bin(str2num(i{1}(1))), ',', dec2bin(i{1}(2),8)), else, code = strcat(dec2bin(str2num(i{1}(1))), ','), end, end
