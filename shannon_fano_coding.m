@@ -20,13 +20,8 @@ while numel(unique(code)) < numel(Psort)
         
             [~,i] = min(diff);
         
-            for j = idx(1:i)
-                code{j} = strcat(code{j},'0');
-            end
-
-            for j = idx(i+1:n)
-                code{j} = strcat(code{j},'1');
-            end
+            code(idx(1:i)) = strcat(code(idx(1:i)),'0');
+            code(idx(i+1:end)) = strcat(code(idx(i+1:end)),'1');
         end
     end
 end
