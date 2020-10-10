@@ -1,5 +1,6 @@
 % Author: Prof. M.Sc. David Ferreira - Federal University of Amazonas
 % Contact: ferreirad08@gmail.com
+% Date: September 2020
 
 P = [1/2 1/4 1/8 1/16 1/32 1/64 1/64]; % probabilities
 
