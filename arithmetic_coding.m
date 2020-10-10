@@ -1,5 +1,6 @@
 % Author: Prof. M.Sc. David Ferreira - Federal University of Amazonas
 % Contact: ferreirad08@gmail.com
+% Date: September 2020
 
 P = [0.5, 0.1, 0.2, 0.1, 0.1]; % probabilities
 M = {'S', 'W', 'I', 'M', '_'}; % respective symbols
