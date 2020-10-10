@@ -1,5 +1,6 @@
 % Author: Prof. M.Sc. David Ferreira - Federal University of Amazonas
 % Contact: ferreirad08@gmail.com
+% Date: September 2020
 
 S = {'s','i','r','_',...
      's','i','d','_',...
