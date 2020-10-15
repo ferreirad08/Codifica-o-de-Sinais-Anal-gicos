@@ -10,7 +10,7 @@ Hx = -sum(Px.*log2(Px)) % entropy of the source
 Py = sum(Pyx.*repmat(Px',1,2))
 Pxy = (Pyx.*repmat(Px',1,2))./repmat(Py,2,1) % probabilidades condicionais a posteriori
 
-Hy = -sum(Py.*log2(Py)) % entropy of y
+Hy = -sum(Py.*log2(Py)) % entropy of receiver
 
 Hxy = sum(sum(repmat(Py,2,1).*Pxy.*log2(1./Pxy))) % conditional entropy of x given y
 
