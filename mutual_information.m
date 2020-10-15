@@ -8,7 +8,7 @@ Pyx = [2/3 1/3; 1/10 9/10] % channel matrix
 Hx = -sum(Px.*log2(Px)) % entropy of the transmitter (source)
 
 Py = sum(Pyx.*repmat(Px',1,2))
-Pxy = (Pyx.*repmat(Px',1,2))./repmat(Py,2,1) % probabilidades condicionais a posteriori
+Pxy = (Pyx.*repmat(Px',1,2))./repmat(Py,2,1)
 
 Hy = -sum(Py.*log2(Py)) % entropy of the receiver
 
