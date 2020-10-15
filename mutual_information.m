@@ -7,6 +7,8 @@ Pyx = [2/3 1/3; 1/10 9/10] % channel matrix
 
 Hx = -sum(Px.*log2(Px)) % entropy of the transmitter (source)
 
+[m,n] = size(Pyx) % number of inputs and outputs
+
 Py = sum(Pyx.*repmat(Px',1,2))
 Pxy = (Pyx.*repmat(Px',1,2))./repmat(Py,2,1)
 
