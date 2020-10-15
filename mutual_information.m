@@ -12,8 +12,7 @@ Pxy = (Pyx.*repmat(Px',1,2))./repmat(Py,2,1) % probabilidades condicionais a pos
 
 Hy = -sum(Py.*log2(Py)) % entropia de y
 
-Hxy = repmat(Py,2,1).*Pxy.*log2(1./Pxy);
-Hxy = sum(Hxy(:)) % entropia condicional de x dado y
+Hxy = sum(sum(repmat(Py,2,1).*Pxy.*log2(1./Pxy))) % entropia condicional de x dado y
 
 Ixy = Hx - Hxy % informação mútua de x e y
 
