@@ -18,7 +18,8 @@ Hxy = sum(sum(repmat(Py,m,1).*Pxy.*log2(1./Pxy),'omitnan')) % conditional entrop
 
 Ixy = Hx - Hxy % mutual information of x and y
 
-C = log2(m) - Hxy % channel capacity
+Hx = log2(m) % uniform distribution
+C = Hx - Hxy % channel capacity
 
 Hrow = -sum(Px.*log2(Px))
 C = log2(n) - Hrow % symmetric channel capacity
