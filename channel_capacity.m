@@ -2,7 +2,6 @@
 % Contact: ferreirad08@gmail.com
 % Date: October 2020
 
-Px = [1/4 1/4 1/2] % symbol/message probabilities
 Pyx = [1 0 0; 0 1 0; 1/2 1/2 0] % channel transition matrix
 
 Hx = -sum(Px.*log2(Px)) % entropy of the transmitter (source)
@@ -18,7 +17,7 @@ Hxy = sum(sum(repmat(Py,m,1).*Pxy.*log2(1./Pxy),'omitnan')) % conditional entrop
 
 Ixy = Hx - Hxy % mutual information of x and y
 
-Hx = log2(m) % uniform distribution
+Hx = log2(m) % symbol/message probabilities with uniform distribution
 C = Hx - Hxy % channel capacity
 
 Hrow = -sum(Px.*log2(Px))
