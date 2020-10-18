@@ -17,6 +17,6 @@ Hx = log2(m) % entropy of the transmitter (source)
 
 C = Hx - Hxy % channel capacity
 
-Hrow = -sum(Px.*log2(Px))
+Hrow = -sum(Pyx(1,:).*log2(Pyx(1,:)))
 C = log2(n) - Hrow % symmetric channel capacity
 
