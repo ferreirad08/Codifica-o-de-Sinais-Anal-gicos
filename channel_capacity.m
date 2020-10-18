@@ -17,6 +17,6 @@ Hxy = sum(sum(repmat(Py,m,1).*Pxy.*log2(1./Pxy),'omitnan')) % conditional entrop
 
 C = Hx - Hxy % channel capacity
 
-Hrow = -sum(Pyx(1,:).*log2(Pyx(1,:)))
+Hrow = -sum(Pyx(1,:).*log2(Pyx(1,:))) % for any row in channel matrix
 C = log2(n) - Hrow % symmetric channel capacity
 
