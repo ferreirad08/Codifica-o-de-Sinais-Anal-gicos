@@ -4,7 +4,7 @@
 
 Pyx = [1 0 0; 0 1 0; 1/2 1/2 0] % channel transition matrix
 
-Hx = log2(m) % entropy of the transmitter (source) with uniform distribution
+Hx = log2(m) % entropy of the transmitter (source) with uniform probability distribution
 
 [m,n] = size(Pyx) % number of inputs and outputs
 
