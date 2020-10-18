@@ -3,7 +3,7 @@
 % Date: October 2020
 
 Px = [1/4 1/4 1/2] % symbol/message probabilities
-Pyx = [1 0 0; 0 1 0; 1/2 1/2 0] % channel matrix
+Pyx = [1 0 0; 0 1 0; 1/2 1/2 0] % channel transition matrix
 
 Hx = -sum(Px.*log2(Px)) % entropy of the transmitter (source)
 
