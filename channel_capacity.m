@@ -17,4 +17,4 @@ Pxy = (Pyx.*repmat(Px',1,n))./repmat(Py,m,1)
 
 Hxy = sum(sum(repmat(Py,m,1).*Pxy.*log2(1./Pxy),'omitnan')) % conditional entropy of x given y
 
-C = Hx - Hxy % channel capacity
+C = Hx - Hxy % channel capacity (maximum of the mutual information)
