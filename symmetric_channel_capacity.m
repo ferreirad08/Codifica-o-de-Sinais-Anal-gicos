@@ -6,7 +6,7 @@ Pyx = [.3 .2 .5;
        .5 .3 .2;
        .2 .5 .3] % channel transition matrix
 
-Hrow = -sum(Pyx(1,:).*log2(Pyx(1,:))) % arbitrary row of the channel transition matrix
+Hrow = -sum(Pyx(1,:).*log2(Pyx(1,:)),'omitnan') % arbitrary row of the channel transition matrix
 
 [~,n] = size(Pyx) % number of outputs
 
