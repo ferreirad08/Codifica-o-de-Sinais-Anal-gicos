@@ -2,7 +2,9 @@
 % Contact: ferreirad08@gmail.com
 % Date: October 2020
 
-Pyx = [.3 .2 .5; .5 .3 .2; .2 .5 .3] % channel transition matrix
+Pyx = [.3 .2 .5;
+       .5 .3 .2;
+       .2 .5 .3] % channel transition matrix
 
 [m,n] = size(Pyx) % number of inputs and outputs
 
