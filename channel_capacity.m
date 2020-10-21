@@ -15,6 +15,6 @@ Hx = log2(m) % entropy of the transmitter (source)
 Py = sum(Pyx.*repmat(Px',1,n))
 Pxy = (Pyx.*repmat(Px',1,n))./repmat(Py,m,1)
 
-Hxy = sum(sum(repmat(Py,m,1).*Pxy.*log2(1./Pxy),'omitnan')) % conditional entropy of x given y
+Hxy = sum(repmat(Py,m,1).*Pxy.*log2(1./Pxy),'all','omitnan') % conditional entropy of x given y
 
 C = Hx - Hxy % channel capacity (maximum of the mutual information)
