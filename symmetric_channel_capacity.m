@@ -6,10 +6,10 @@ Pyx = [.3 .2 .5;
        .5 .3 .2;
        .2 .5 .3] % channel transition matrix
 
+[~,n] = size(Pyx) % number of outputs
+
 row = Pyx(1,:) % arbitrary row of the channel transition matrix
 
 Hrow = -sum(row.*log2(row),'omitnan') % entropy of the row
-
-[~,n] = size(Pyx) % number of outputs
 
 C = log2(n) - Hrow % symmetric channel capacity
