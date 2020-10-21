@@ -16,6 +16,6 @@ Pxz = (Pzx.*repmat(Px',1,n))./repmat(Pz,m,1)
 
 Hz = -sum(Pz.*log2(Pz),'omitnan') % entropy of the receiver
 
-Hxz = sum(repmat(Pz,m,1).*Pxz.*log2(1./Pxz),'all','omitnan') % conditional entropy of x given z
+Hxz = sum(sum(repmat(Pz,m,1).*Pxz.*log2(1./Pxz),'omitnan')) % conditional entropy of x given z
 
 Ixz = Hx - Hxz % mutual information of x and z
