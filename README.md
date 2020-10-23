@@ -8,6 +8,6 @@ Scripts created purely for didactic purposes.
 
 Current examples include:
 
-Shannon-Fano, Huffman, Arithmetic and Lempel-Ziv'78.
+Shannon-Fano, Huffman, Arithmetic and Lempel-Ziv'78 Coding.
 
-Mutual Information and Channel Capacity (Non-symmetric and Symmetric).
+Calculation of Mutual Information and Channel Capacity (Non-symmetric and Symmetric Channel).
