@@ -8,6 +8,8 @@ Scripts created purely for didactic purposes.
 
 Current examples include:
 
+Calculation of Information Entropy, Codeword Length, Code Efficiency and Code Redundancy.
+
 Shannon-Fano, Huffman, Arithmetic and Lempel-Ziv'78 Coding.
 
 Calculation of Mutual Information and Channel Capacity (Non-symmetric and Symmetric Channel).
