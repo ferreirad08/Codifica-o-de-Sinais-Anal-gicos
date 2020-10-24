@@ -1,5 +1,5 @@
 S = {'A', 'R', 'A', 'R', 'A', 'S'}; % sequence of symbols
-M = {'A', 'R', 'S'}; % symbols
+M = unique(S,'stable') % symbols
 P = [3/6, 2/6, 1/6]; % respective probabilities
 
 n_symbols = numel(M) % number of symbols
