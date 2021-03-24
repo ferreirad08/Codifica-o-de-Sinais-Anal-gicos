@@ -13,3 +13,5 @@ Calculation of Information Entropy, Codeword Length, Code Efficiency and Code Re
 Shannon-Fano, Huffman, Arithmetic and Lempel-Ziv'78 Coding.
 
 Calculation of Mutual Information and Channel Capacity (Non-symmetric and Symmetric Channel).
+
+![Image](https://raw.githubusercontent.com/ferreirad08/Coding-of-analog-signals/master/telecommunication_system.png)
