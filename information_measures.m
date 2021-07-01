@@ -1,3 +1,7 @@
+% Author: Prof. M.Sc. David Ferreira - Federal University of Amazonas
+% Contact: ferreirad08@gmail.com
+% Date: October 2020
+
 S = {'A', 'R', 'A', 'R', 'A', 'S'}; % sequence of symbols
 M = unique(S,'stable') % symbols
 P = [3/6, 2/6, 1/6]; % respective probabilities
